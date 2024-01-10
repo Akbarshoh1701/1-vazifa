@@ -1,16 +1,8 @@
-from django.shortcuts import HttpResponse
+from django.shortcuts import render, HttpResponse
 
 
-def hom_pech(respons):
-    return HttpResponse("""
-    <h1 style="color: #333;">Asosiy sahifaga xush kelibsiz</h1>
-    <ul>
-        <li><a href="http://127.0.0.1:8000/news/">So'nggi Yangiliklar</a></li>
-        <li><a href="/maqolalar/">Ilmiy Maqolalar</a></li>
-        <!-- Boshqa sahifalar uchun linklar shu yerga qo'shing -->
-    </ul>
-
-""")
+def home_page(request):
+    return render(request, 'index.html')
 
 
 def news(respons):
@@ -106,4 +98,4 @@ Keyinchalik Nano model ishga tushiriladi. Uning yordamida ishlab chiquvchilar An
 </html>
 """
 
-    )
+                        )

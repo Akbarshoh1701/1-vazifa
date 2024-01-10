@@ -1,4 +1,4 @@
-Django~=5.0.1
+Django
 pip~=23.1.2
 asgiref~=3.7.2
 sqlparse~=0.4.4
