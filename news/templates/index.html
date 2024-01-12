@@ -3,13 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+       body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff; /* Sahifa fon rangi */
+        }
+
+        h1 {
+            color: #334;
+            border: 20px solid #933;
+            padding: 10px;
+            text-align: center;
+            background-color: #2f4; /* Sarlavha fon rangi */
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            background-color: #fff; /* Ro'yxat fon rangi */
+        }
+
+        li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        a:hover {
+            color: #555;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-color: #cce5ff; /* Orqa fon rangi */
+        }
+
+        .news-container {
+            display: flex;
+            justify-content: space-around;
+<!--            flex-wrap: 100px;-->
+            padding: 20px;
+            width: 1500px;
+            height: 50px;
+            margin: 10px;
+            border: 1px solid #ddd;
+
+        }
+
+        .news-card {
+            background-color: green;
+            border: 1px solid #ddd;
+<!--            padding: 100px;-->
+            width: 300px;
+        }
+
+        .news-card img {
+            width: 100%; /* Rasimni o'lchamini to'liq maydon bilan to'ldirish */
+            height: auto; /* Tasvirning o'lchamiga qarab avtomatik ravishda balandligini belgilash */
+        }
+    </style>
 </head>
 <body>
-<h1 style="color: #333;">Asosiy sahifaga xush kelibsiz</h1>
-<ul>
-    <li><a href="http://127.0.0.1:8000/news/">So'nggi Yangiliklar</a></li>
-    <li><a href="/maqolalar/">Ilmiy Maqolalar</a></li>
-</ul>
-<h1>this is html file {{ request.user }}</h1>
+    <h1>Asosiy sahifaga xush kelibsiz</h1>
+<!--    <ul>-->
+<!--        <li><a href="http://127.0.0.1:8000/news/">So'nggi Yangiliklar</a></li>-->
+<!--        <li><a href="http://127.0.0.1:8000/news1/">Ilmiy Maqolalar</a></li>-->
+<!--    </ul>-->
+    <div class="news-container">
+        <div class="news-card">
+            <img src="https://storage.kun.uz/source/10/3qEKNXGBniqVKdaHOK0NKiAym6hflJeZ.jpg" alt="Yangilik rasmi" width="50" height="50">
+            <a href="http://127.0.0.1:8000/news/">
+                “3 yoshli qizim 3 ta tilda gapiradi” – onalar bolalariga qanday usulda til o‘rgatyapti?</a>
+            <p>Bolalariga birdaniga bir nechta til o‘rgatayotgan onalarning fikriga ko‘ra, har qanday bola kichik
+                yoshidan til o‘rgana oladi. Go‘daklarni qiynamasdan, ular bilan ko‘proq muloqot qilib o‘yin tarzida til
+                o‘rgatish mumkin.</p>
+        </div>
+        <div class="news-card">
+
+            <img src="https://storage.kun.uz/source/thumbnails/_medium/10/cUeU8Bk6kxFPhaP_APFYDPwpC5bY-aDa_medium.jpg"
+                 alt="Jadidlar rasmi">
+            <a href="http://127.0.0.1:8000/news1/">
+                Vakillik parlamenti, tenglik, so‘z va matbuot erkinligi kafolatlari: jadidlarning milliy huquq tizimini
+                shakllantirishdagi o‘rni haqida
+            </a>
+            <p>
+                Jadidlar deganda odatda ko‘z o‘ngimizda bo‘yniga zanjir osilgan, qamoq panjarasi ortida o‘tirgan yoki
+                uvadasi chiqib ketgan chopondagi Avloniy, Qodiriy, Cho‘lpon, Fitrat yoki Behbudiylar gavdalanadi.
+            </p>
+        </div>
+
+        <!-- Boshqa yangiliklar ham shu tarzda qo'shishingiz mumkin -->
+    </div>
+<!--    <h1>this is html file {{ request.user }}</h1>-->
 </body>
 </html>

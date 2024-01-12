@@ -7,3 +7,9 @@ def home_page(request):
 
 def news(request):
     return render(request, "news.html")
+
+
+def news1(request):
+    return render(request, "news1.html")
+
+
